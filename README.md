@@ -1,5 +1,14 @@
 # Vehicle Rental application 
 
+
+###Design Patterns
+* Factory
+* Strategy
+* Builder
+
+
+### Problem Statement
+
 Using OO principles to design a cab rental application - I am going to use Java
 
 Users should be able to create an account for them to book vehicles of the below types.  

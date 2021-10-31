@@ -21,11 +21,7 @@ public class MonthInvoiceService implements InvoiceService {
     }
 
     private Invoice buildInvoice(VehicleReservation vehicleReservation) {
-        Invoice invoice = new Invoice();
-        invoice.setInvoiceId(UUID.randomUUID().toString());
-        invoice.setReservationId(vehicleReservation.getReservationId());
         User user = UserRepository.userMap.get(vehicleReservation.getUsrId());
-        invoice.setUserId(user.getEmail());
         Duration rentedDuration;
         if (vehicleReservation.getReturnDate() == null)
             rentedDuration =
@@ -51,14 +47,17 @@ public class MonthInvoiceService implements InvoiceService {
 
         double vehicleAddonCost = AddonCostUtil.computeEquipmentCost(vehicleReservation);
         double addonServiceCost = AddonCostUtil.computeEquipmentCost(vehicleReservation);
-        invoice.setAddonEquipmentsCost(vehicleAddonCost);
-        invoice.setAddonServicesCost(addonServiceCost);
         double rentalCost = months * monthlyCost + fixedCost + vehicleAddonCost + addonServiceCost;
         double taxes = rentalCost * .18;
-
-        invoice.setUsageCharges(rentalCost);
-        invoice.setTaxes(taxes);
-        invoice.setTotal(rentalCost + taxes);
-        return invoice;
+        return Invoice.builder()
+                .invoiceId(UUID.randomUUID().toString())
+                .reservationId(vehicleReservation.getReservationId())
+                .userId(user.getEmail())
+                .addonEquipmentsCost(vehicleAddonCost)
+                .addonServicesCost(addonServiceCost)
+                .usageCharges(rentalCost)
+                .taxes(taxes)
+                .total(rentalCost + taxes)
+                .build();
     }
 }

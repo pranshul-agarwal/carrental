@@ -1,10 +1,12 @@
 package com.gb.rental.model.reservation;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@Builder
 public class Invoice {
     private String invoiceId;
     private String reservationId;
