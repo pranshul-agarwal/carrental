@@ -6,6 +6,9 @@
 * Strategy
 * Builder
 
+###Resources
+* https://akshay-iyangar.github.io/system-design/grokking-ood/examples/java/car-rental-system.html
+* https://github.com/gopalbala/carrental
 
 ### Problem Statement
 
