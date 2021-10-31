@@ -5,7 +5,12 @@ import com.gb.rental.model.account.LicenseInfo;
 import com.gb.rental.model.account.User;
 import com.gb.rental.model.common.Address;
 import com.gb.rental.model.common.Coordinates;
+import com.gb.rental.model.enums.*;
 import com.gb.rental.model.reservation.*;
+import com.gb.rental.model.reservation.addon.equipment.Navigation;
+import com.gb.rental.model.reservation.addon.equipment.VehicleAddon;
+import com.gb.rental.model.reservation.addon.service.AddonService;
+import com.gb.rental.model.reservation.addon.service.Chauffeur;
 import com.gb.rental.model.vehicle.*;
 import org.apache.commons.lang3.RandomUtils;
 

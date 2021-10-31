@@ -5,14 +5,15 @@ import com.gb.rental.exceptions.InvalidVehicleIdException;
 import com.gb.rental.exceptions.ReservationNotFoundException;
 import com.gb.rental.exceptions.VehicleBookedException;
 import com.gb.rental.model.account.User;
-import com.gb.rental.model.reservation.ReservationStatus;
+import com.gb.rental.model.enums.ReservationStatus;
 import com.gb.rental.model.reservation.VehicleInventory;
 import com.gb.rental.model.reservation.VehicleReservation;
 import com.gb.rental.model.vehicle.HireableVehicle;
-import com.gb.rental.model.vehicle.VehicleStatus;
+import com.gb.rental.model.enums.VehicleStatus;
 import com.gb.rental.repository.UserRepository;
 import com.gb.rental.repository.VehicleInventoryRepository;
 import com.gb.rental.repository.VehicleRepository;
+import com.gb.rental.service.impl.UserServiceImpl;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 

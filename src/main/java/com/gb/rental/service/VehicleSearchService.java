@@ -1,7 +1,7 @@
 package com.gb.rental.service;
 
 import com.gb.rental.model.vehicle.HireableVehicle;
-import com.gb.rental.model.vehicle.VehicleType;
+import com.gb.rental.model.enums.VehicleType;
 
 import java.time.LocalDateTime;
 import java.util.List;

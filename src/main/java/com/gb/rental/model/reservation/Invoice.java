@@ -10,7 +10,7 @@ public class Invoice {
     private String reservationId;
     private String userId;
     private double usageCharges;
-    private double addonCost;
+    private double addonEquipmentsCost;
     private double addonServicesCost;
     private double taxes;
     private double total;

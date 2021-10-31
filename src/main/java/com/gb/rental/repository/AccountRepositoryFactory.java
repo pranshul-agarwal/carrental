@@ -1,6 +1,6 @@
 package com.gb.rental.repository;
 
-import com.gb.rental.model.account.AccountType;
+import com.gb.rental.model.enums.AccountType;
 
 public class AccountRepositoryFactory {
     public static AccountRepository getAccountRepository(AccountType accountType) {

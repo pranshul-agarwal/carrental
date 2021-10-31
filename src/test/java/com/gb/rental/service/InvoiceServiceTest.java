@@ -12,6 +12,8 @@ import com.gb.rental.model.vehicle.HireableVehicle;
 import com.gb.rental.repository.UserRepository;
 import com.gb.rental.repository.VehicleInventoryRepository;
 import com.gb.rental.repository.VehicleRepository;
+import com.gb.rental.service.impl.InvoiceServiceImpl;
+import com.gb.rental.service.impl.UserServiceImpl;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -48,7 +50,7 @@ public class InvoiceServiceTest {
         Invoice invoice = invoiceService.computeInvoice(vehicleReservation);
         assertNotNull(invoice);
         assertEquals(invoice.getUsageCharges(), 1600.0);
-        assertEquals(invoice.getAddonCost(), 500.0);
+        assertEquals(invoice.getAddonEquipmentsCost(), 500.0);
         assertEquals(invoice.getTaxes(), 288.0);
         assertEquals(invoice.getTotal(), 1888.0);
     }

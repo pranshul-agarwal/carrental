@@ -1,5 +1,7 @@
 package com.gb.rental.model.reservation;
 
+import com.gb.rental.model.enums.ReservationStatus;
+import com.gb.rental.model.enums.VehicleReservationType;
 import com.gb.rental.model.vehicle.HireableVehicle;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,7 +12,8 @@ import java.util.UUID;
 @Getter
 @Setter
 public class VehicleInventory {
-    private String id;
+    private String inventoryId;
+    //private VehicleReservation vehicleReservation;
     private String reservationId;
     private LocalDateTime reservationDate;
     private ReservationStatus status;
@@ -27,7 +30,8 @@ public class VehicleInventory {
 
     public VehicleInventory(VehicleReservation vehicleReservation,
                             HireableVehicle hireableVehicle) {
-        this.id = UUID.randomUUID().toString();
+        this.inventoryId = UUID.randomUUID().toString();
+        //this.vehicleReservation = vehicleReservation;
         this.reservationId = vehicleReservation.getReservationId();
         this.reservationDate = vehicleReservation.getReservationDate();
         this.status = vehicleReservation.getStatus();
@@ -41,7 +45,7 @@ public class VehicleInventory {
     }
 
     public VehicleInventory(HireableVehicle hireableVehicle) {
-        this.id = UUID.randomUUID().toString();
+        this.inventoryId = UUID.randomUUID().toString();
         this.startMileage = hireableVehicle.getMileage();
         this.endMileage = hireableVehicle.getMileage();
         this.vehicle = hireableVehicle;

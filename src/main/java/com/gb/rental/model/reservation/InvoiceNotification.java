@@ -1,6 +1,6 @@
 package com.gb.rental.model.reservation;
 
-import com.gb.rental.model.common.NotificationStatus;
+import com.gb.rental.model.enums.NotificationStatus;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -3,6 +3,7 @@ package com.gb.rental.service;
 import com.gb.rental.TestData;
 import com.gb.rental.exceptions.VehicleNotExistsException;
 import com.gb.rental.model.vehicle.HireableVehicle;
+import com.gb.rental.service.impl.VehicleServiceImpl;
 import org.junit.jupiter.api.Test;
 
 import java.util.UUID;

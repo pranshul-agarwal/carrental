@@ -1,6 +1,10 @@
 package com.gb.rental.service;
 
-import com.gb.rental.model.reservation.VehicleReservationType;
+import com.gb.rental.model.enums.VehicleReservationType;
+import com.gb.rental.service.impl.DayInvoiceService;
+import com.gb.rental.service.impl.HourInvoiceService;
+import com.gb.rental.service.impl.MonthInvoiceService;
+import com.gb.rental.service.impl.PackageInvoiceServiceImpl;
 
 public class InvoiceServiceFactory {
     public InvoiceService getInvoiceService(VehicleReservationType vehicleReservationType) {

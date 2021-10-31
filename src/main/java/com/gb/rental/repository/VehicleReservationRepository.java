@@ -1,7 +1,7 @@
 package com.gb.rental.repository;
 
 import com.gb.rental.model.reservation.VehicleReservation;
-import com.gb.rental.model.vehicle.VehicleType;
+import com.gb.rental.model.enums.VehicleType;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

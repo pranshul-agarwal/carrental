@@ -1,6 +1,9 @@
 package com.gb.rental.model.vehicle;
 
 import com.gb.rental.model.common.Coordinates;
+import com.gb.rental.model.enums.VehicleCategory;
+import com.gb.rental.model.enums.VehicleStatus;
+import com.gb.rental.model.enums.VehicleType;
 import lombok.Getter;
 import lombok.Setter;
 

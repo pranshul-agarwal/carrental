@@ -11,6 +11,8 @@ import com.gb.rental.model.vehicle.HireableVehicle;
 import com.gb.rental.repository.UserRepository;
 import com.gb.rental.repository.VehicleInventoryRepository;
 import com.gb.rental.repository.VehicleRepository;
+import com.gb.rental.service.impl.UserServiceImpl;
+import com.gb.rental.service.util.InvoiceBuilderUtil;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

@@ -1,5 +1,6 @@
 package com.gb.rental.model.account;
 
+import com.gb.rental.model.enums.LicenseType;
 import lombok.Getter;
 import lombok.Setter;
 

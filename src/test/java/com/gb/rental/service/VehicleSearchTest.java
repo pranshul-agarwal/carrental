@@ -2,8 +2,9 @@ package com.gb.rental.service;
 
 import com.gb.rental.TestData;
 import com.gb.rental.model.vehicle.HireableVehicle;
-import com.gb.rental.model.vehicle.VehicleType;
+import com.gb.rental.model.enums.VehicleType;
 import com.gb.rental.repository.VehicleInventoryRepository;
+import com.gb.rental.service.impl.VehicleSearchServiceImpl;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;

@@ -1,5 +1,6 @@
 package com.gb.rental.model.vehicle;
 
+import com.gb.rental.model.enums.VehicleLogType;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -2,7 +2,7 @@ package com.gb.rental.service;
 
 import com.gb.rental.exceptions.AccountDoesNotExistsException;
 import com.gb.rental.model.account.Account;
-import com.gb.rental.model.account.AccountType;
+import com.gb.rental.model.enums.AccountType;
 
 public interface AccountService {
     Account createAccount(Account account, AccountType accountType);
