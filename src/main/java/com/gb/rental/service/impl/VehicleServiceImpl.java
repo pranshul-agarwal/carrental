@@ -9,6 +9,7 @@ import com.gb.rental.service.VehicleService;
 
 public class VehicleServiceImpl implements VehicleService {
     VehicleRepository vehicleRepository = new VehicleRepository();
+    VehicleInventoryRepository vehicleInventoryRepository = new VehicleInventoryRepository();
 
     @Override
     public HireableVehicle getVehicleById(String id) {
@@ -41,14 +42,12 @@ public class VehicleServiceImpl implements VehicleService {
         if (hireableVehicle == null)
             throw new VehicleNotExistsException("Vehicle with id " + vehicleId + "not found");
         VehicleRepository.vehicleMap.remove(vehicleId);
-        VehicleInventoryRepository vehicleInventoryRepository = new VehicleInventoryRepository();
         vehicleInventoryRepository.removeFromInventory(new VehicleInventory(hireableVehicle));
         //Remove future bookings or reassign
     }
 
     private void addToInventory(HireableVehicle hireableVehicle) {
         VehicleInventory vehicleInventory = new VehicleInventory(hireableVehicle);
-        VehicleInventoryRepository vehicleInventoryRepository = new VehicleInventoryRepository();
         vehicleInventoryRepository.addToInventory(vehicleInventory);
     }
 }
